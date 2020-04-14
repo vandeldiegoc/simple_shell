@@ -6,11 +6,11 @@
  */
 int _strlen(char *s)
 {
-  int len;
+int len;
 
-  for (len = 0; s[len]; len++)
-    ;
-  return (len);
+for (len = 0; s[len]; len++)
+;
+return (len);
 }
 /**
  * _strdup - returns a pointer to a newly allocated space in memory.
@@ -19,22 +19,22 @@ int _strlen(char *s)
  */
 char *_strdup(char *str)
 {
-  unsigned int i;
-  char *s;
+unsigned int i;
+char *s;
 
-  if (str == NULL)
-    {
-      return (NULL);
-    }
-  s = malloc(_strlen(str) + 1);
-  if (s == NULL)
-    {
-      return (NULL);
-    }
-  for (i = 0; str[i]; i++)
-    {
-      s[i] = str[i];
-    }
-  s[i] = '\0';
-  return (s);
+if (str == NULL)
+{
+return (NULL);
+}
+s = malloc(_strlen(str) + 1);
+if (s == NULL)
+{
+return (NULL);
+}
+for (i = 0; str[i]; i++)
+{
+s[i] = str[i];
+}
+s[i] = '\0';
+return (s);
 }
