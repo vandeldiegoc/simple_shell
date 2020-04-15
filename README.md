@@ -39,7 +39,7 @@ This is a program that provides a command line interpreter. allowing read comman
 ## use
 1. clone this  repository.
 2. compile the code using:
-       gcc  -Wall -Werror -Wextra -pedantic * .c -o hsh
+      gcc  -Wall -Werror -Wextra -pedantic * .c -o hsh
 3. enter your command.
 
 ## example
