@@ -28,7 +28,8 @@ This is a program that provides a command line interpreter. allowing read comman
 |` _putchar()`   | ** writes the character c to stdout**     |
 |`var_con()`   | ** returns the content of a var**     |
 |`_strmatch()`   | **  looks if the var exists**     |
-|`var_name()`   | ** find the var name in the i pos.**  |
+|`var_name()`   | ** find the var name in the i pos.** |
+
 ##command
 - [x] ls  -[argument]
 - [x] exit
