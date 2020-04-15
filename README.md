@@ -18,19 +18,19 @@ This is a program that provides a command line interpreter. allowing read comman
 | `_strcat()`   | **concatenates two strings**     |
 | `_strcpy()`   | **copy from src to dest**     |
 | `_strcmp()`   | **compares two strings**     |
-| `grid_cpy()`   | **  copy from src to dest**     |
-| `path_exe()`   | ** create a child process and wait until it ends**     |
-|`shell_path()`   | ** look if the token is a file in the path dir**     |
-|`shell_loop()`   | ** wait for a string a process it**     |
-|`shell_builtins()`   | ** compares the and runs the argument 0 if it is exit or env**     |
-|`puts_grid()`   | ** prints vertically the elem. of a grid**     |
-|`_strlen`   | ** returns the length of a string**     |
-|` _putchar()`   | ** writes the character c to stdout**     |
-|`var_con()`   | ** returns the content of a var**     |
-|`_strmatch()`   | **  looks if the var exists**     |
-|`var_name()`   | ** find the var name in the i pos.** |
+| `grid_cpy()`   | **copy from src to dest**     |
+| `path_exe()`   | **create a child process and wait until it ends**     |
+|`shell_path()`   | **look if the token is a file in the path dir**     |
+|`shell_loop()`   | **wait for a string a process it**     |
+|`shell_builtins()`   | **compares the and runs the argument 0 if it is exit or env**     |
+|`puts_grid()`   | **prints vertically the elem. of a grid**     |
+|`_strlen`   | **returns the length of a string**     |
+|` _putchar()`   | **writes the character c to stdout**     |
+|`var_con()`   | **returns the content of a var**     |
+|`_strmatch()`   | **looks if the var exists**     |
+|`var_name()`   | **find the var name in the i pos.** |
 
-##command
+## command
 - [x] ls  -[argument]
 - [x] exit
 - [x] env
