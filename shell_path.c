@@ -38,21 +38,25 @@ return (new_grid);
 /**
  * path_exe - create a child process and wait until it ends.
  * @new_grid: grid with the new [0] parameter
- * Return: 1 on success or exit in errors
+ * @env: env. vars * Return: 1 on success or exit in errors
+ * @ex: exit number
+ *
+ * Return: 1 on success
  */
-int path_exe(char **new_grid)
+int path_exe(char **new_grid, char **env, int *ex)
 {
-int status = 1;
+int status;
 pid_t child;
 
 child = fork();
 if (child == -1)
 {
 perror("hsh");
+exit(EXIT_FAILURE);
 }
 else if (child == 0)
 {
-if (execve(new_grid[0], new_grid, NULL) == -1)
+if (execve(new_grid[0], new_grid, env) == -1)
 {
 perror("hsh");
 exit(EXIT_FAILURE);
@@ -61,6 +65,8 @@ exit(EXIT_FAILURE);
 else
 {
 waitpid(child, &status, WUNTRACED);
+if (WIFEXITED(status))
+*ex = WEXITSTATUS(status);
 }
 return (1);
 }
@@ -69,9 +75,11 @@ return (1);
  * shell_path - look if the token is a file in the path dir.
  * @grid: tokenized line.
  * @path_dir: PATH dirs.
+ * @env: env vars
+ * @ex: exit number
  * Return: 1 success or 0 if not
  */
-int shell_path(char **grid, char **path_dir)
+int shell_path(char **grid, char **path_dir, char **env, int *ex)
 {
 char *full_file;
 char **new_grid;
@@ -81,14 +89,14 @@ struct stat st;
 /*find the file in the directory*/
 for (i = 0; path_dir[i]; i++)
 {
-full_file = malloc(20 * sizeof(char));
+full_file = malloc(1024 * sizeof(char));
 _strcpy(full_file, path_dir[i]);
 _strcat(full_file, "/");
 _strcat(full_file, grid[0]);
 if (stat(full_file, &st) == 0)
 {
 new_grid = grid_cpy(full_file, grid);
-path_exe(new_grid);
+path_exe(new_grid, env, ex);
 free(full_file);
 j = 0;
 if (new_grid[j])
