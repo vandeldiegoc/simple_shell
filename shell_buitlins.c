@@ -9,6 +9,7 @@ int shell_builtins(char **grid)
 {
 if (_strcmp(grid[0], "exit") == 0)
 return (-1);
+
 if (_strcmp(grid[0], "env") == 0)
 {
 puts_grid(environ);

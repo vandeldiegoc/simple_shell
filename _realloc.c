@@ -28,8 +28,10 @@ return (ptr);
 np = malloc(new_size);
 if (np == NULL)
 return (NULL);
+
 for (i = 0; i < old_size; i++)
 np[i] = ((char *)ptr)[i];
+
 free(ptr);
 return (np);
 }

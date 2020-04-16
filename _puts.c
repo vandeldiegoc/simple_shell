@@ -12,6 +12,7 @@ for (i = 0; str[i]; i++)
 {
 if (str[i] == '\0')
 break;
+
 _putchar(str[i]);
 }
 }

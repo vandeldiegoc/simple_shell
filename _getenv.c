@@ -17,6 +17,7 @@ exit(EXIT_FAILURE);
 }
 for (i = 0; var[i] != '='; i++)
 v_name[i] = var[i];
+
 v_name[i] = '\0';
 return (v_name);
 }
@@ -37,6 +38,7 @@ return (0);
 }
 if (name[i] != var[i])
 return (0);
+
 return (1);
 }
 /**

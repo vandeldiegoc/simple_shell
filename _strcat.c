@@ -12,6 +12,7 @@ int i;
 
 for (sz = 0; dest[sz]; sz++)
 ;
+
 for (i = 0; src[i]; i++)
 {
 dest[sz + i] = src[i];

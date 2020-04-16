@@ -13,7 +13,7 @@ int *exit_status;
 exit_status = malloc(sizeof(int));
 if (!exit_status)
 {
-perror("lsh");
+perror("hsh");
 exit(EXIT_FAILURE);
 }
 if (isatty(STDIN_FILENO))

@@ -12,6 +12,7 @@ char **new_grid;
 
 for (j = 0; grid[j]; j++)
 ;
+
 new_grid = malloc(sizeof(char *) * (j + 1));
 if (!new_grid)
 {

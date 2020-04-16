@@ -16,13 +16,16 @@ int flag = 0;
 /*Nothing comming*/
 if (grd[0] == NULL)
 return (1);
+
 /*builtins*/
 flag = shell_builtins(grd);
 if (flag)
 return (flag);
+
 /*PATH commands*/
 if ((grd[0][0] != '/') && (shell_path(grd, path_dir, env, ex)))
 return (1);
+
 /*exe commands or no valid*/
 return (shell_process(grd, env, line, path_dir, ex));
 }
