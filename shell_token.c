@@ -15,7 +15,7 @@ grid = malloc(bfsz * sizeof(char *));
 
 if (!grid)
 {
-perror("hsh: ");
+perror("lsh: ");
 exit(EXIT_FAILURE);
 }
 grid[pos] = strtok(line, delim);
@@ -35,7 +35,7 @@ bfsz += BUF_SZ;
 grid = _realloc(grid, obfsz, bfsz);
 if (!grid)
 {
-perror("hsh: ");
+perror("lsh: ");
 exit(EXIT_FAILURE);
 }
 }

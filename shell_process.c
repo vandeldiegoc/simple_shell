@@ -17,14 +17,14 @@ pid_t child;
 child = fork();
 if (child == -1)
 {
-perror("hsh");
+perror("lsh");
 exit(EXIT_FAILURE);
 }
 else if (child == 0)
 {
 if (execve(grd[0], grd, env) == -1)
 {
-perror("hsh");
+perror("lsh");
 free(line);
 free(grd);
 free(path_dir);

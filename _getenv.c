@@ -12,7 +12,7 @@ char *v_name;
 v_name = malloc(1024);
 if (!v_name)
 {
-perror("hsh: ");
+perror("lsh: ");
 exit(EXIT_FAILURE);
 }
 for (i = 0; var[i] != '='; i++)
@@ -52,6 +52,7 @@ int i;
 
 for (i = 0; var[i] != '='; i++)
 ;
+
 return (var + i + 1);
 }
 /**

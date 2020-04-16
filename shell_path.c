@@ -16,7 +16,7 @@ for (j = 0; grid[j]; j++)
 new_grid = malloc(sizeof(char *) * (j + 1));
 if (!new_grid)
 {
-perror("hsh");
+perror("lsh");
 exit(EXIT_FAILURE);
 }
 for (i = 0; i < j; i++)
@@ -52,14 +52,14 @@ pid_t child;
 child = fork();
 if (child == -1)
 {
-perror("hsh");
+perror("lsh");
 exit(EXIT_FAILURE);
 }
 else if (child == 0)
 {
 if (execve(new_grid[0], new_grid, env) == -1)
 {
-perror("hsh");
+perror("lsh");
 exit(EXIT_FAILURE);
 }
 }
