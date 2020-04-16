@@ -1,1 +1,45 @@
-.TH  " page"
+.TH simple_shell "16 April 2020" "1.0" "man_1_simple_shell"
+.SH NAME
+.B hsh
+- This is a program that provides a command line interpreter. allowing read commands and run other programs.
+.SH SYNOPSIS
+.B ./hsh
+.B $[command]
+.B $[command]+[argument]
+.SH DESCRIPTION
+.B run the program showing the interface waiting for the user to enter an imput command
+.SH OPTIONS
+.B $ls --print list file.
+.B $pwd --print  Present Working Directory,.
+.B $exit --the program ends.
+.B $env --print a list of the current environment variables.
+.SH EXAMPLE
+.B  ls -l
+.B total 84
+.B -rw-r--r-- 1 vda vda  169 abr 14 17:29 AUTHORS
+.B -rw-r--r-- 1 vda vda 1202 abr 14 16:47 _getenv.c
+.B -rw-r--r-- 1 vda vda  262 abr 14 17:17 main.c
+.B -rw-r--r-- 1 vda vda  578 abr 15 18:47 man_1_simple_shell
+.B -rw-r--r-- 1 vda vda  245 abr 14 16:36 _putchar.c
+.B -rw-r--r-- 1 vda vda  207 abr 14 16:43 _puts.c
+.B -rw-r--r-- 1 vda vda  213 abr 14 16:52 puts_grid.c
+.B -rw-r--r-- 1 vda vda 2531 abr 15 15:46 README.md
+.B -rw-r--r-- 1 vda vda  656 abr 14 16:48 _realloc.c
+.B -rw-r--r-- 1 vda vda  323 abr 14 16:57 shell_buitlins.c
+.B -rw-r--r-- 1 vda vda  915 abr 14 17:20 shell.h
+.B -rw-r--r-- 1 vda vda  594 abr 14 17:07 shell_loop.c
+.B -rw-r--r-- 1 vda vda 1690 abr 14 17:11 shell_path.c
+.B -rw-r--r-- 1 vda vda  440 abr 14 17:02 shell_process.c
+.B -rw-r--r-- 1 vda vda  331 abr 14 16:55 shell_read.c
+.B -rw-r--r-- 1 vda vda  553 abr 14 16:52 shell_status.c
+.B -rw-r--r-- 1 vda vda  623 abr 14 17:01 shell_token.c
+.B -rw-r--r-- 1 vda vda  316 abr 14 16:21 _strcat.c
+.B -rw-r--r-- 1 vda vda  285 abr 14 16:34 _strcmp.c
+.B -rw-r--r-- 1 vda vda  241 abr 14 16:42 _strcpy.c
+.B -rw-r--r-- 1 vda vda  522 abr 14 16:29 _strdup.c
+.SH SEE ALSO
+.B bash(1);
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Adonis Tejeda and Diego Vivius.
